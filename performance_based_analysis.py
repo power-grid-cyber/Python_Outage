@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-from Outage_analysis_functions import outage_data
+from outage_analysis_functions import outage_data
 
 from scipy.integrate import simpson
 from numpy import trapz
