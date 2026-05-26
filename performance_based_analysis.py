@@ -14,7 +14,7 @@ from outage_analysis_functions import outage_data
 from scipy.integrate import simpson
 from numpy import trapz
 
-matplotlib.use("Qt5Agg")
+# matplotlib.use("Qt5Agg")
 
 # read in the data
 # col_list = ['Outage_Reviewed','Outage',	'Time_Off',	'Time_On'	Number_Out	Duration	Customer Minutes

@@ -38,14 +38,15 @@ def cum_analysis(outage_ford):
     cum_outage_data = pd.DataFrame(data = cum_outage_data)
     return cum_outage_data
 
-matplotlib.use("Qt5Agg")
+# matplotlib.use("Qt5Agg")
 
-outage_ford = pd.read_excel('Outage_with_wind.xlsx', sheet_name='Ford')
-wind_data_ford = pd.read_csv('weather_data/ford_wind_data.csv')
-# outage_ford = pd.read_excel('outage_data/3 Year Outage History new.xlsx', sheet_name='Outage_Ford')
+# outage_ford = pd.read_excel('Outage_with_wind.xlsx', sheet_name='Ford')
+outage_data = 'data/Grid_disruption_2014'
+outage_ford = pd.read_excel(outage_data)
+# wind_data_ford = pd.read_csv('weather_data/ford_wind_data.csv')
+
 outage_ford = outage_ford.dropna(subset=['Outage'])
-
-sections = outage_ford['Section'].unique()
+sections = outage_ford['Geographic Areas'].unique()
 
 plt.hist(outage_ford['Section'], bins= len(sections) , histtype='bar', rwidth=0.8)
 plt.xticks(rotation='vertical')
